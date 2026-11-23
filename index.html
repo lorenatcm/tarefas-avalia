@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tarefas · Avalia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="topo" hidden>
+  <div class="marca"><span class="barra"></span>Avalia <b>Tarefas</b></div>
+  <nav id="abas"></nav>
+  <div class="usuario"><span id="nome-usuario"></span><button id="sair" class="link">Sair</button></div>
+</header>
+
+<main id="app">
+  <section id="tela-login" class="login" hidden>
+    <div class="login-caixa">
+      <div class="marca grande"><span class="barra"></span>Avalia <b>Tarefas</b></div>
+      <p class="sub" id="login-sub">Entre com o seu e-mail da Avalia.</p>
+      <form id="form-login">
+        <label>E-mail<input type="email" id="login-email" required autocomplete="email" placeholder="nome@avaliarq.com.br"></label>
+        <label>Senha<input type="password" id="login-senha" required minlength="8" autocomplete="current-password" placeholder="mínimo 8 caracteres"></label>
+        <button type="submit" class="primario" id="login-botao">Entrar</button>
+        <p class="erro" id="login-erro"></p>
+      </form>
+      <button class="link" id="login-alternar">Primeiro acesso? Crie sua senha</button>
+    </div>
+  </section>
+
+  <section id="tela-minhas" hidden></section>
+  <section id="tela-todas" hidden></section>
+</main>
+
+<div id="menu-status" class="menu-status" hidden></div>
+<dialog id="dlg-tarefa"></dialog>
+<div id="aviso" class="aviso" hidden></div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
